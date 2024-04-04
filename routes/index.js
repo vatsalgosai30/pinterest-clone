@@ -6,15 +6,23 @@ const { render } = require("ejs");
 const passport = require("passport");
 
 const localStrategy = require("passport-local");
-passport.authenticate(new localStrategy(userModel.authenticate()));
+passport.use(new localStrategy(userModel.authenticate()));
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
-  res.render("index", { title: "Express" });
+  res.render("index");
+});
+
+router.get("/login", function (req, res, next) {
+  res.render("login");
+});
+
+router.get("/feed", function (req, res, next) {
+  res.render("feed");
 });
 
 router.get("/profile", isLoggedIn, function (req, res, next) {
-  res.send("profile");
+  res.render("profile");
 });
 /*------without passport some apis ------------------*/
 
@@ -70,12 +78,12 @@ router.post(
   "/login",
   passport.authenticate("local", {
     successRedirect: "/profile",
-    failureRedirect: "/",
+    failureRedirect: "/login",
   }),
   function (req, res) {}
 );
 
-router.post("/logout", function (req, res) {
+router.get("/logout", function (req, res, next) {
   req.logout(function (err) {
     if (err) {
       return next(err);
@@ -86,7 +94,7 @@ router.post("/logout", function (req, res) {
 
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) return next();
-  res.redirect("/");
+  res.redirect("/login");
 }
 
 module.exports = router;
