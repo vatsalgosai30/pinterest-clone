@@ -8,7 +8,7 @@ Before running this project, you need to have the following installed on your ma
 - npm (Node Package Manager)
 - MongoDB Compass
 
-### Connect to localhost(localhost:27017/) MongoDB Compass or you can use MongoDB Atlas create cluster
+### Connect to localhost(localhost:27017/) MongoDB Compass or you can use MongoDB Atlas
 
     - (mongoose.connect("mongodb://127.0.0.1:27017/pinterest-clone")
     .then(() => console.log("✅ Connected to MongoDB"))
