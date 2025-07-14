@@ -41,9 +41,12 @@ app.use((err, req, res, next) => {
   res.render("error", { message: err.message });
 });
 
-mongoose.connect("mongodb://127.0.0.1:27017/pinterest-clone", {
-  useNewUrlParser: true,
-});
+// mongoose.connect("mongodb://localhost:27017/pinterest-clone", {
+//   useNewUrlParser: true,
+// });
+mongoose.connect("mongodb://127.0.0.1:27017/pinterest-clone")
+  .then(() => console.log("✅ Connected to MongoDB"))
+  .catch((err) => console.error("❌ MongoDB connection error:", err));
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
