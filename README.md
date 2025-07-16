@@ -33,7 +33,7 @@ A Pinterest-style web app built using Node.js, Express, MongoDB, EJS, and Passpo
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/your-username/pinterest-clone.git
+git clone https://github.com/vatsalgosai30/pinterest-clone.git
 cd pinterest-clone
 
 # 2. Install dependencies
