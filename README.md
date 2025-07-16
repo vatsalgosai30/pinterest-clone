@@ -41,7 +41,7 @@ npm install
 
 # 3. Start MongoDB (if using local)
 
-# Ensure it's running on localhost:27017
+# Ensure it's running on localhost:27017 or 127.0.0.1:27017
 
 # 4. Run the app
 node app.js
