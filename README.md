@@ -45,3 +45,20 @@ npm install
 
 # 4. Run the app
 node app.js
+
+```
+---
+
+💡 Future Additions
+
+ Image upload with Multer or Cloudinary
+
+ Social login (Google / GitHub)
+
+ Like / Save functionality for images
+
+ User profile pages
+
+ Dark mode toggle
+
+ Responsive UI with Tailwind CSS
