@@ -49,16 +49,16 @@ node app.js
 ```
 ---
 
-💡 Future Additions
+## 💡 Future Additions
 
- Image upload with Multer or Cloudinary
+- Image upload with Multer or Cloudinary
 
- Social login (Google / GitHub)
+- Social login (Google / GitHub)
 
- Like / Save functionality for images
+- Like / Save functionality for images
 
- User profile pages
+- User profile pages
 
- Dark mode toggle
+- Dark mode toggle
 
- Responsive UI with Tailwind CSS
+- Responsive UI with Tailwind CSS
